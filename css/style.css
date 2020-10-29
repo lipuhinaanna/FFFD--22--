@@ -5,21 +5,21 @@
 
 @font-face {
   font-family: "Nunito";
-  src: url("../fonts/Nunito-Bold.ttf") format("ttf");
+  src: url("../fonts/Nunito-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Nunito";
-  src: url("../fonts/Nunito-Regular.ttf") format("ttf");
+  src: url("../fonts/Nunito-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "corinthia";
-  src: url("../fonts/corinthia_[allfont.ru].ttf") format("ttf");
+  src: url("../fonts/corinthia_[allfont.ru].ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -29,25 +29,13 @@ body {
   color: #36310D;
 }
 
-.header::after {
-  content: "";
-  position: absolute;
-  background-image: url("../svg/Соты (1).svg");
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0.7;
-}
-
 .header {
   position: relative;
-  z-index: 2;
-  background-image: url("../images/ноги фото десктоп.png");
+  z-index: 1;
+  background-image: url("../images/ноги вариант без сот.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-color: #000000;
 }
 
 .container {
@@ -80,7 +68,8 @@ body {
   font-size: 18px;
 }
 
-a.menu-link {
+.menu-link, 
+.choice-link {
   text-decoration: none;
   color: #36310D;
 }
@@ -120,27 +109,25 @@ h2 {
 
 .phone-box {
   position: relative;
-  width: 415px;
-  margin-left: 35%;
+  width: 250px;
+  margin-left: 84.5%;
   z-index: 2;
   margin-top: 5%;
   padding-bottom: 7%;
 }
 
-.phone:after {
-  content: "";
-  display: block;
-  background-color: #36310D;
-  height: 1px;
-  width: 80px;
-}
-
+.phone:after
 .phone:before {
   content: "";
-  display: block;
+  z-index: 2;
+  background-image: url("../svg/Ellipse 3.svg");
   background-color: #36310D;
-  height: 1px;
-  width: 80px;
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 h3 {
@@ -148,6 +135,29 @@ h3 {
   text-transform: uppercase;
   font-size: 20px;
   color: #36310D;
+  position: relative;
+  text-align: center;
+  align-items: center;
+}
+
+h3.reserv {
+  color: #F7EA88;
+}
+
+h3:before {
+  content: "";
+  background-image: url("../svg/Polygon 1.svg");
+  background-repeat: no-repeat;
+  height: 197px;
+  width: 197px;
+  top: 100px;
+  left: 0;
+  right: 0;
+  bottom: 0;;
+}
+
+h3.reserv:before {
+  background-image: url("../svg/Polygon 2.svg");
 }
 
 .choice {
@@ -159,7 +169,7 @@ h3 {
   align-content: space-between;
   height: 200px;
   margin-left: 18%;
-  top: 249px;
+  top: 110px;
 }
 
 .reserv-box {
