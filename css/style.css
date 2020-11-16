@@ -257,6 +257,8 @@ h2,
   .choice {
     width: 100px;
     height: 100px;
+    padding: 8px;
+    box-sizing: border-box;
   }
 
   .choice-reserv {
@@ -269,8 +271,6 @@ h2,
 
   .choice-link {
     font-size: 12px;
-    padding-right: 7px;
-    padding-left: 7px;
   }
 
   .choice-link-reserv {
