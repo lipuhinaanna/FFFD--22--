@@ -230,15 +230,14 @@ h5 {
 }
 
 .advantage {
-  width: 16%;
+  width: 16.5%;
   position: relative;
   margin-bottom: 70px;
 }
 
 .advantage-m {
-  width: 16%;
-  margin-right: 20%;
-  margin-left: 20%;
+  margin-right: 19%;
+  margin-left: 19%;
   margin-bottom: 60px;
 }
 
@@ -274,6 +273,15 @@ h5 {
 
 .service-price {
   margin-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  position: relative;
+}
+
+.price-box {
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 .prices-title {
@@ -344,14 +352,14 @@ h5 {
   list-style: none;
 }
 
-.price, 
-.service {
+.price {
   list-style: none;
   font-size: 18px;
 }
 
 .checkbox-group {
   display: block;
+  font-size: 18px;
 }
 
 .checkbox-text {
@@ -372,7 +380,12 @@ h5 {
 }
 
 .checkbox:checked ~ .checkbox-text::before {
- background-image: url("../svg/чекбос нажатие.svg"); 
+  background-image: url("../svg/чекбос нажатие.svg"); 
+}
+
+.checkbox:checked + .checkbox-text {
+  color: #A89819;
+  font-weight: bold;
 }
 
 .checkbox {
@@ -385,6 +398,12 @@ h5 {
 .total-price {
   font-size: 25px;
   font-weight: bold;
+}
+
+.person {
+  position: absolute;
+  top: -100px;
+  right: -180px;
 }
 
 .offers {
@@ -444,13 +463,65 @@ button {
 }
 
 
+@media (min-width: 1254px) and (max-width: 1265px) {
+  .service-price {
+    width: 60%;
+  }
 
-
+  .prices-kinds {
+    width: 78%;
+  }
+}  
 
 @media (min-width: 676px) and (max-width: 1253px) {
   .menu-list {
     width: 280px;
   }
+
+  .advantages-title:before {
+    font-size: 250px;
+    left: -140px;
+  }
+
+  .prices-title:before {
+    font-size: 250px;
+    top: -130px;
+    left: -30px;
+  }
+
+  .advantage-list {
+    justify-content: space-between;
+  }
+
+  .advantage-m {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .advantage {
+    width: 35%;
+  }
+
+  .advantage:nth-child(even) {
+    margin-left: 25%;
+  }
+
+  .img-sugar {
+    display: none;   
+  }
+
+  .advantage-down {
+    padding-top: 0px;
+  }
+
+  .service-price {
+    width: 60%;
+  }
+
+  .prices-kinds {
+    width: 78%;
+  }
+
 }
 
 @media (min-width: 676px) and (max-width: 810px) {
@@ -470,6 +541,83 @@ button {
   .motto {
     margin-left: 0;
     margin-right: auto;
+  }
+
+  .advantages-title:before {
+    font-size: 200px;
+    left: -110px;
+    top: -100px;
+  }
+
+  .prices-title:before {
+    font-size: 200px;
+    top: -110px;
+    left: -20px;
+  }
+
+  .advantage-list {
+    justify-content: space-between;
+  }
+
+  .advantage-m {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .advantage {
+    width: 35%;
+  }
+
+  .advantage:nth-child(even) {
+    margin-left: 25%;
+  }
+
+  .img-sugar {
+    display: none;   
+  }
+
+  .advantage-down {
+    padding-top: 0px;
+  }
+
+  .prices-kinds {
+    width: 80%;
+  }
+}
+
+@media (min-width: 677px) and (max-width: 780px) {
+  .person {
+    display: none;
+  }
+
+  .view {
+    display: none;
+  }
+
+  .service-price {
+    width: 90%;
+  }
+
+  .checkbox-group {
+    font-size: 16px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  h6 {
+    font-size: 35px;
+  }
+
+  .offer-title {
+    font-size: 30px;
+  }
+
+  .offer-button {
+    width: 400px;
+    height: 80px;
+    font-size: 30px;
   }
 }
 
@@ -539,5 +687,76 @@ button {
   .phone-box {
     margin-right: auto;
     padding-top: 150px;
+  }
+
+  .advantage-list {
+    display: block;
+  }
+
+  .advantage {
+    width: 65%;
+  }
+  
+  .advantage-m {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .advantage:nth-child(even) {
+    margin-left: auto;
+  }
+
+  .img-sugar {
+    display: none;   
+  }
+
+  .advantage-down {
+    padding-top: 0px;
+  }  
+
+  .advantages-title:before {
+    font-size: 200px;
+    left: -110px;
+    top: -100px;
+  }
+
+  .prices-title:before {
+    font-size: 200px;
+    top: -110px;
+    left: -20px;
+  }
+
+  .person {
+    display: none;
+  }
+
+  .view {
+    display: none;
+  }
+
+  .service-price {
+    width: 90%;
+  }
+
+  .checkbox-group {
+    font-size: 16px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  h6 {
+    font-size: 30px;
+  }
+
+  .offer-title {
+    font-size: 25px;
+  }
+
+  .offer-button {
+    width: 300px;
+    height: 70px;
+    font-size: 25px;
   }
 }
