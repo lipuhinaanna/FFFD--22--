@@ -515,10 +515,11 @@ button {
 }
 
 .certificate-title,
-.reviews-title {
+.reviews-title,
+.gallery-title {
   text-align: center;
   font-size: 30px;
-  letter-spacing: 10%;
+  letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 60px;
 }
@@ -528,6 +529,7 @@ button {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 100px;
+  position: relative;
 }
 
 .certificate-left,
@@ -536,22 +538,35 @@ button {
   margin-bottom: 30px;
 }
 
-.certificate-title:before {
+.certificates:before,
+.reviews-box:before,
+.gallery-box:before {
   content: "";
   display: inline-block;
   vertical-align: middle;
   background-image: url("../svg/стрелка назад.svg");
   width: 53px;
-  background-color: #36310D;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #ffffff;
+  right: 50px;
 }
 
-.certificate-title:after {
+.certificates:after,
+.reviews-box:after,
+.gallery-box:after {
   content: "";
   display: inline-block;
   vertical-align: middle;
   background-image: url("../svg/стрелка вперед.svg");
   width: 53px;
-  background-color: #36310D;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #ffffff;
+  right: 50px;
+  vertical-align: middle;
 }
 
 .reviews-box {
@@ -559,6 +574,7 @@ button {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 175px;
+  position: relative;
 }
 
 .review {
@@ -577,6 +593,7 @@ button {
   margin-top: 35px;
   margin-right: 30px;
   margin-left: 30px;
+  margin-bottom: 35px;
   font-size: 18px;
   display: flex;
   flex-wrap: wrap;
@@ -587,7 +604,107 @@ button {
   width: 100%;
 }
 
-@media (min-width: 1270px) and (max-width: 1330px) {
+.review-mobil {
+  display: none;
+}
+
+.phrase-box {
+  width: 100%;
+  background-color: #F5E13D;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.phrase {
+  font-family: "corinthia";
+  width: 84%;
+  margin-right: 8%;
+  margin-left: 8%;
+  font-size: 100px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 150px;
+}
+
+.phrase-person {
+  font-size: 40px;
+  margin-right: 8%;
+  margin-left: auto;
+  margin-bottom: 150px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 150px;
+  margin-top: 150px;
+  margin-right: 50px;
+  margin-left: 50px;
+  position: relative;
+}
+
+.gallery-title {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.gallery-box {
+  width: 710px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery-img {
+  width: 80%;
+}
+
+.offers-friend {
+  background-image: url("../images/фон спец предложение 2.png");
+}
+
+.contacts-box {
+  display: flex;
+  flex-wrap: wrap;
+  width: 83%;
+  margin-bottom: 150px;
+  margin-top: 150px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.map-box {
+  width: 50%;
+}
+
+.contacts {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.telephone {
+  width: 100%;
+  text-align: center;
+}
+
+.telephone-link {
+  text-decoration: none;
+  color: #36310D;
+}
+
+.address {
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+@media (min-width: 1270px) and (max-width: 1560px) {
   .certificate-left {
     margin-right: auto;
     margin-left: auto;
@@ -605,9 +722,13 @@ button {
     margin-right: auto;
     margin-left: auto;
   }
+
+  .review-mobil {
+    display: none;
+  }
 }  
 
-@media (min-width: 1254px) and (max-width: 1265px) {
+@media (min-width: 1254px) and (max-width: 1269px) {
   .service-price {
     width: 60%;
   }
@@ -620,9 +741,26 @@ button {
     margin-left: 0;
   }
 
-  .certificate-right {
-    margin-right: 0;
+  .certificate-left {
+    margin-right: auto;
     margin-left: auto;
+  }
+
+  .certificate-right {
+    display: none;
+  }
+
+  .reviews-box-right {
+    display: none;
+  }
+
+  .reviews-box-left {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .review-mobil {
+    display: none;
   }
 }  
 
@@ -689,9 +827,35 @@ button {
     top: -80px;
   }
 
-  .certificate-right {
-    margin-right: 0;
+  .certificate-left {
+    margin-right: auto;
     margin-left: auto;
+  }
+
+  .certificate-right {
+    display: none;
+  }
+
+  .reviews-box-right {
+    display: none;
+  }
+
+  .reviews-box-left {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .review-mobil {
+    display: none;
+  }
+
+  .map-box {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .contacts {
+    width: 100%;
   }
 }
 
@@ -743,6 +907,10 @@ button {
 }
 
 @media (min-width: 300px) and (max-width: 531px) {
+  .master-name:before {
+    display: inline-block;
+  }
+
   .master-name:before {
     display: none;
   }
@@ -812,9 +980,52 @@ button {
     width: 80%;
   }
 
-  .certificate-right {
-    margin-right: 0;
+  .certificate-left {
+    width: 60%;
+    margin-right: auto;
     margin-left: auto;
+  }
+
+  .certificate-right {
+    display: none;
+  }
+
+  .reviews-box-right {
+    display: none;
+  }
+
+  .reviews-box-left {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .review-mobil {
+    display: none;
+  }
+}
+
+@media (min-width: 781px) and (max-width: 840px) {
+  .certificate-left {
+    width: 60%;
+  }
+
+  .review {
+    flex-wrap: wrap;
+    width: 60%;
+  }
+
+  .review-left {
+    display: none;
+  }
+
+  .review-mobil {
+    display: flex;
+    width: 100%;
+  }
+
+  .rewier-text {
+    width: 100%;
+    margin-bottom: 35px;
   }
 }
 
@@ -857,13 +1068,52 @@ button {
     font-size: 30px;
   }
 
-  .certificate-right {
-    margin-right: 0;
+  .certificate-left {
+    width: 60%;
+    margin-right: auto;
     margin-left: auto;
   }
+
+  .certificate-right {
+    display: none;
+  }
+
+  .review {
+    flex-wrap: wrap;
+    width: 60%;
+  }
+
+  .review-left {
+    display: none;
+  }
+
+  .review-mobil {
+    display: flex;
+    width: 100%;
+  }
+
+  .reviews-box-right {
+    display: none;
+  }
+
+  .reviews-box-left {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .gallery {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+
+  .gallery-box {
+    width: calc(100% - 60px);
+  }
+
+  .gallery-img {
+    width: 70%;
+  }
 }
-
-
 
 @media (min-width: 300px) and (max-width: 675px) {
   .menu {
@@ -1014,13 +1264,73 @@ button {
     font-size: 20px;
   }
 
-  .certificate-right {
-    width: 280px;
-    margin-right: 0;
+  .certificate-left {
+    width: 60%;
+    margin-right: auto;
     margin-left: auto;
   }
 
-  .certificate-left {
-    width: 280px;
+  .certificate-right {
+    display: none;
+  }
+
+  .reviews-box-right {
+    display: none;
+  }
+
+  .reviews-box-left {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .certificate-title,
+  .reviews-title,
+  .gallery-title {
+    font-size: 25px;
+  }
+
+  .review {
+    flex-wrap: wrap;
+    width: 60%;
+  }
+
+  .review-left {
+    display: none;
+  }
+
+  .review-mobil {
+    display: flex;
+    width: 100%;
+  }
+
+  .rewier-text {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+
+  .gallery {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+
+  .gallery-box {
+    width: calc(100% - 60px);
+  }
+
+  .gallery-img {
+    width: 70%;
+  }
+
+  .map-box {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .map {
+    width: 300px;
+  }
+
+  .contacts {
+    width: 100%;
   }
 }
