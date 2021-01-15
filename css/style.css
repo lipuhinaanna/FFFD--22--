@@ -550,7 +550,7 @@ button {
   background-repeat: no-repeat;
   background-position: center center;
   background-color: #ffffff;
-  right: 50px;
+  margin: auto 0;
 }
 
 .certificates:after,
@@ -565,8 +565,8 @@ button {
   background-repeat: no-repeat;
   background-position: center center;
   background-color: #ffffff;
-  right: 50px;
   vertical-align: middle;
+  margin: auto 0;
 }
 
 .reviews-box {
@@ -650,6 +650,8 @@ button {
 }
 
 .gallery-box {
+  display: flex;
+  position: relative;
   width: 710px;
   margin-left: auto;
   margin-right: auto;
@@ -702,6 +704,96 @@ button {
   text-align: center;
   font-size: 30px;
   font-weight: 400;
+}
+
+footer {
+  display: flex;
+  background-color: #36310D;
+  color: #FFEC59;
+  font-size: 30px;
+  font-style: normal;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.social {
+  display: flex;
+  width: 16%;
+  box-sizing: border-box;
+  margin-left: 16.6%;
+  padding-top: 150px;
+  flex-wrap: wrap;
+}
+
+.visually-hidden {
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+} 
+
+.social-link { 
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 61px;
+  width: 61px;
+  height: 61px;
+  background-position: center;
+}
+
+.social-link-instagram {
+  background-image: url("../svg/иконка инстаграм.svg");
+  margin-right: 30px;
+}
+
+.social-link-whatsapp {
+  background-image: url("..//svg/иконка вотсап.svg");
+}
+
+.social-text {
+  letter-spacing: 2px;
+}
+
+.social-icons {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  width: 100%;
+}
+
+.footer-date-box {
+  margin-left: 16.6%;
+  margin-right: 16.6%;
+  padding-bottom: 150px;
+  margin-top: 60px;
+}
+
+.footer-date {
+  font-size: 20px;
+}
+
+.footer-menu {
+  display: flex;
+  width: 42%;
+  margin-right: 16.6%;
+  padding-top: 150px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.footer-menu-items {
+  list-style: none;
+}
+
+.footer-menu-link {
+  text-decoration: none;
+  color: #FFEC59;
+  font-style: normal;
+}
+
+.footer-menu-left {
+  margin-right: 20px;
 }
 
 @media (min-width: 1270px) and (max-width: 1560px) {
@@ -850,16 +942,23 @@ button {
   }
 
   .map-box {
+    display: flex;
     width: 100%;
     justify-content: center;
+    margin-bottom: 70px;
   }
 
   .contacts {
     width: 100%;
   }
+
+  .contact-logo {
+    margin-bottom: 65px;
+    margin-top: 65px;
+  }
 }
 
-@media (min-width: 758px) and (max-width: 1070px) {
+@media (min-width: 758px) and (max-width: 1053px) {
   .master-name:before {
     font-size: 200px;
     top: 0;
@@ -867,7 +966,7 @@ button {
   }
 }
 
-@media (min-width: 736px) and (max-width: 772px) {
+@media (min-width: 736px) and (max-width: 757px) {
   .master-name:before {
     font-size: 200px;
     top: -80px;
@@ -875,22 +974,14 @@ button {
   }
 }
 
-@media (min-width: 718px) and (max-width: 735px) {
-  .master-name:before {
-    font-size: 200px;
-    top: -80px;
-    left: -90px;
-  }
-}
-
-@media (min-width: 676px) and (max-width: 717px) {
+@media (min-width: 676px) and (max-width: 735px) {
   .master-name:before {
     font-size: 150px;
     top: -50px;
   }
 }
 
-@media (min-width: 632px) and (max-width: 675px) {
+@media (min-width: 619px) and (max-width: 675px) {
   .master-name:before {
     font-size: 150px;
     top: -50px;
@@ -898,7 +989,7 @@ button {
   }
 }
 
-@media (min-width: 532px) and (max-width: 631px) {
+@media (min-width: 532px) and (max-width: 618px) {
   .master-name:before {
     font-size: 150px;
     top: 30px;
@@ -907,13 +998,17 @@ button {
 }
 
 @media (min-width: 300px) and (max-width: 531px) {
-  .master-name:before {
+  .master-name {
     display: inline-block;
   }
 
   .master-name:before {
     display: none;
   }
+
+  .img-flower {
+    display: none;
+  }  
 }
 
 @media (min-width: 676px) and (max-width: 810px) {
@@ -1001,6 +1096,12 @@ button {
 
   .review-mobil {
     display: none;
+  }
+
+  .map-box {
+    display: flex;
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -1112,6 +1213,29 @@ button {
 
   .gallery-img {
     width: 70%;
+  }
+}
+
+@media (min-width: 676px) and (max-width: 1332px) {
+  .footer-menu {
+    width: 25%;
+    justify-content: flex-start;
+  }
+
+  .social-icons {
+    margin-bottom: 170px;
+  }
+}
+
+@media (min-width: 676px) and (max-width: 885px) {
+  footer {
+    font-size: 20px;
+  }
+
+  .social-link { 
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
   }
 }
 
@@ -1264,6 +1388,10 @@ button {
     font-size: 20px;
   }
 
+  .master-img {
+    width: 240px;
+  }
+
   .certificate-left {
     width: 60%;
     margin-right: auto;
@@ -1322,8 +1450,10 @@ button {
   }
 
   .map-box {
+    display: flex;
     width: 100%;
     justify-content: center;
+    margin-bottom: 70px;
   }
 
   .map {
@@ -1331,6 +1461,83 @@ button {
   }
 
   .contacts {
+    width: 100%;
+  }
+
+  .contact-logo {
+    margin-bottom: 65px;
+    margin-top: 65px;
+  }
+
+  .footer-menu {
+    width: 25%;
+    justify-content: flex-start;
+  }
+
+  footer {
+    font-size: 20px;
+  }
+
+  .social-link { 
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 440px) {
+  .advantages-title,
+  .prices-title,
+  .master-title {
+    font-size: 35px;
+  }
+
+  .advantage-title {
+    font-size: 25px;
+  }
+
+  .telephone-link {
+    font-size: 30px;
+  }
+
+  .certificates:before,
+  .reviews-box:before,
+  .gallery-box:before {
+    display: none;
+  }
+
+  .certificates:after,
+  .reviews-box:after,
+  .gallery-box:after {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-image: url("../svg/стрелки вперед назад мин экран.svg");
+  }
+
+  .certificate-left,
+  .certificate-right {
+    margin-bottom: 20px;
+  }
+
+  .review-left,
+  .review-right {
+    margin-bottom: 20px;
+  }
+
+  .rewier-text {
+    font-size: 15px;
+  }
+
+  .certificate-left {
+    width: 80%;
+  }
+
+  .review {
+    width: 80%;
+  }
+
+  .gallery-img {
     width: 100%;
   }
 }
