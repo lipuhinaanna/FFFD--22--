@@ -27,7 +27,7 @@
 body {
   font-family: "Nunito", sans-serif;
   color: #36310D;
-  min-width: 320px;
+  min-width: 270px;
 }
 
 .header {
@@ -68,7 +68,7 @@ body {
   flex-wrap: wrap;
   list-style: none;
   text-transform: capitalize;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .menu-link, 
@@ -101,7 +101,7 @@ body {
 
 .welcome-title {
   text-transform: none;
-  font-size: 60px;
+  font-size: 80px;
   font-family: "corinthia";
   margin-right: auto;
 }
@@ -110,7 +110,7 @@ h2,
 .phone {
   display: flex;
   text-transform: none;
-  font-size: 20px;
+  font-size: 25px;
   align-items: center;
 }
 
@@ -120,7 +120,7 @@ h2,
 
 .phone-box {
   position: relative;
-  width: 220px;
+  width: 250px;
   margin-right: 5%;
   margin-left: auto;
   z-index: 2;
@@ -535,7 +535,8 @@ button {
 .certificate-left,
 .certificate-right {
   width: 440px;
-  margin-bottom: 30px;
+  padding: 0;
+  margin: 0;
 }
 
 .certificates:before,
@@ -856,9 +857,17 @@ footer {
   }
 }  
 
+@media (min-width: 1254px) and (max-width: 1350px) {
+  .menu-list {
+    width: 280px;
+    font-size: 18px;
+  }
+}
+
 @media (min-width: 676px) and (max-width: 1253px) {
   .menu-list {
     width: 280px;
+    font-size: 18px;
   }
 
   .advantages-title:before {
@@ -1442,6 +1451,7 @@ footer {
   }
 
   .gallery-box {
+    flex-wrap: wrap;
     width: calc(100% - 60px);
   }
 
@@ -1513,16 +1523,6 @@ footer {
     width: 100%;
     justify-content: center;
     background-image: url("../svg/стрелки вперед назад мин экран.svg");
-  }
-
-  .certificate-left,
-  .certificate-right {
-    margin-bottom: 20px;
-  }
-
-  .review-left,
-  .review-right {
-    margin-bottom: 20px;
   }
 
   .rewier-text {
